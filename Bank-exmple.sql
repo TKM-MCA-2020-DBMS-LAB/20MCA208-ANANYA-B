@@ -1,0 +1,11 @@
+ create database bank;
+use bank;
+create table Customer(cid int not null auto_increment,cname varchar(100),loc varchar(100),sex varchar(10),dob date,primary key(cid));
+ create table Bank_brn(bcode int not null,bloc varchar(100),bsate varchar(100),primary key(bcode));
+create table Deposit(Dacno int not null,dtype varchar(100),ddate date,damt int);
+create table Loan(Lacno int,ltype varchar(100),ldate date,lamt int);
+ create table Accounts_in(Bcode varchar(100),cid int); 
+create table Depositor(cid int ,dacno int); 
+create table Borrower(cid int,lacno int);
+ show tables;
+ describe Customer;descibe Bank_brn;describe Deposit;describe Loan;describe Accounts_in;describe Depositor;describe Borrower;	
